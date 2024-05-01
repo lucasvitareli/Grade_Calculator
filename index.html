@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <!-- Inserting fonts from google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- linkin css file to this project-->
+    <link rel="stylesheet" href="./main.css">
+
+</head>
+<body>
+    <div class="container">
+            <!-- Creating the header using a logo image followed by the project's tittle -->
+        <header>    
+            <img src="images/logo.png" alt="Graduation hat and diploma">
+            <h1>Grade Calculator</h1>
+        </header>
+        <!-- Creating the form, with the required user's informations, and a submit button at the end -->
+        <form id="form-subjects">
+            <input type="text" id="subject-name"  required placeholder="Subject"> 
+            <input type="number" id="subject-grade" required placeholder="Grade" min="0" max="10" />
+            <button type="submit">Add +</button> 
+        </form>
+        <!-- Creating the main table, with the table headers -->
+        <table cellspacing= "0"> <!-- Removing the space between the lines -->
+            <thead>
+                <tr>
+                    <th>Subject </th>
+                    <th>Grade</th>
+                    <th>Situation</th>
+                </tr>
+            </thead>
+        <!-- Creating table's body, where it contains the users given informations -->
+            <tbody>
+            </tbody>
+        <!-- Creating table's foot, where it contains the overall results -->
+            <tfoot>
+                <tr>
+                    <td>Overall GPA</td>
+                    <td id="final-GPA-value">7</td>
+                    <td id="final-GPA-result"><span class="when-approved">Approved</span></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script src="./main.js"></script>
+    
+</body>
+</html>
