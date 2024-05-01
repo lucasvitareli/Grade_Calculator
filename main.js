@@ -23,7 +23,7 @@ function addLine() {
     const inputSubjectGrade = document.getElementById('subject-grade') //creating a variable 'inputSubjectGrade' and linking it to its ID
 
     if (subjects.includes(inputSubjectName.value)) {
-        alert(`The subject: (${inputSubjectName.value}) has already been inserted.`)
+        alert(`The subject: (${inputSubjectName.value})5 has already been inserted.`)
     }else {
 
         subjects.push(inputSubjectName.value)
@@ -50,7 +50,7 @@ function updateTable () {
 function updateOverallGPA () {
     const finalGPA = calcOverallGPA()
 
-    document.getElementById('final-GPA-value').innerHTML = finalGPA
+    document.getElementById('final-GPA-value').innerHTML = finalGPA.toFixed(2)
     document.getElementById('final-GPA-result').innerHTML = finalGPA >= minimumGrade ? spanApproved : spanNotApproved
 
 }
